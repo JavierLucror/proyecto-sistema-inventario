@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>{{inputdata.title}}</h1>
+<div mat-dialog-content>
+    <form ngNativeValidate [formGroup]="formularioDeProductos" (ngSubmit)="enviarDatos()">
+        <div class="input_container">
+            <mat-form-field>
+                <mat-label>Descripcion</mat-label>
+                <input matInput type="text" required matTooltip="Ingrese descripcion" name="" formControlName="descripcion" id="" aria-describedby="helpId">
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Categoria</mat-label>
+                <mat-select formControlName="categoria">
+                    @for (categoria of categorias; track categoria) {
+                        <mat-option [value]="categoria.nombre" >{{categoria.nombre}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Precio</mat-label>
+                <input matInput type="text" required matTooltip="Ingrese precio" name="" formControlName="precio" id="" aria-describedby="helpId">
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions>
+            <button type="submit" class="boton-editar btn btn-outline-primary" (click)="cerrarDialog()">EDITAR</button>
+        </div>
+    </form>
+</div>

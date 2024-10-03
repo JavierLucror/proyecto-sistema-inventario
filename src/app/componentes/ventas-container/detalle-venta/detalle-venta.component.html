@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>{{inputdata.title}}</h1>
+<div mat-dialog-content>
+    <table mat-table [dataSource]="productos" class="mat-elevation-z8">
+      
+        <!-- Descripcion Column -->
+        <ng-container matColumnDef="descripcion">
+          <th mat-header-cell *matHeaderCellDef>Descripcion</th>
+          <td class="registro" mat-cell *matCellDef="let row"> {{row.descripcion}} </td>
+        </ng-container>
+
+        <!-- Categoria Column -->
+        <ng-container matColumnDef="categoria">
+          <th mat-header-cell *matHeaderCellDef>Categoria</th>
+          <td class="registro" mat-cell *matCellDef="let row"> {{row.categoria}} </td>
+        </ng-container>
+      
+        <!-- Precio Column -->
+        <ng-container matColumnDef="precio">
+          <th mat-header-cell *matHeaderCellDef>Precio</th>
+          <td class="registro" mat-cell *matCellDef="let row"> {{row.precio}} </td>
+        </ng-container>
+      
+        <!-- Cantidad Column -->
+        <ng-container matColumnDef="cantidad">
+          <th mat-header-cell *matHeaderCellDef>Cantidad</th>
+          <td class="registro" mat-cell *matCellDef="let row"> {{row.cantidad}} </td>
+        </ng-container>
+
+        <!-- Total Column -->
+        <ng-container matColumnDef="total">
+            <th mat-header-cell *matHeaderCellDef>Total</th>
+            <td class="registro" mat-cell *matCellDef="let row"> {{row.total_producto}}€ </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="columnasDialog"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnasDialog;"></tr>
+      </table>
+</div>
+<div mat-dialog-actions>
+    <button type="button" class="btn btn-danger" (click)="cerrarDialog()">Close</button>
+</div>

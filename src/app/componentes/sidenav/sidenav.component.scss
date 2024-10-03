@@ -1,0 +1,51 @@
+.example-toolbar  {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.example-app-name {
+  width: 56%;
+}
+.example-container {
+  display: flex;
+  width: 12%;
+  height: 90vh;
+}
+
+.example-drawer-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.example-drawer {
+  display: flex;
+  user-select: none;
+  width: 230px;
+}
+
+.parent {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.active {
+  background-color: #ffc404;
+}
+
+.full-width {
+  margin-left: .5rem;
+  font-size: 1.25rem;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+mat-icon  {
+  vertical-align: middle !important;
+}
+
+//Usuario logeado
+.user-zone  {
+  margin-top: 2.5rem;
+}

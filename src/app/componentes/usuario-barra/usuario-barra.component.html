@@ -1,0 +1,11 @@
+<ul class="usuario-container">
+    <li class="item-barra">
+        <a class="barra-enlace" *ngIf="loginbtn" routerLink="/login-usuario" routerLinkActive="active">Iniciar Sesión</a>
+    </li>
+    <li class="item-barra">
+        <a class="barra-enlace" *ngIf="loginbtn" routerLink="/registrar-usuario" routerLinkActive="active">Registrarse</a>
+    </li>
+    <li class="cerrar-sesion">
+        <button type="button" *ngIf="logoutbtn" class="btn btn-outline-warning" (click)="logout()">Cerrar Sesión</button>
+    </li>
+</ul>

@@ -1,0 +1,40 @@
+.max-container {
+    width: 87.5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -87.5vh;
+    margin-left: 12.5vw;
+    justify-content: space-around;    
+}
+
+.boton-agregar  {
+    margin-top: -1rem;
+    width: 13.5vw;
+    height: auto;
+    font-size: 1.75rem;
+}
+
+/*Tabla*/
+
+.table-container    {
+    margin: 1rem;
+    width: 87.5%;
+    display: flex;
+}
+
+table {
+    width: 87.5%;
+    margin: 1rem auto;
+}
+
+td, th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+
+.tabla-botones   {
+    cursor: auto;
+}
+
+/*Tabla*/

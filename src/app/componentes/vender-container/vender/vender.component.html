@@ -1,0 +1,95 @@
+<div class="max-container">
+
+  <div class="vender-container">
+    <mat-form-field>
+      <!--<mat-label>Buscar producto</mat-label>-->
+      <input type="text"
+          placeholder="Buscar producto"
+          aria-label="Buscar"
+          matInput
+          matTooltip="Buscar producto"
+          [formControl]="myControl"
+          [matAutocomplete]="auto" [(ngModel)]="productoSelect.descripcion">
+      <mat-autocomplete #auto="matAutocomplete">
+        @for (option of filteredOptions | async; track option) {
+          <mat-option [value]="option">{{option}}</mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Cantidad</mat-label>
+      <input matInput [(ngModel)]="productoSelect.cantidad" type="number" required matTooltip="Ingrese cantidad">
+    </mat-form-field>
+    <button type="button" class="boton-agregar btn btn-outline-primary" (click)="registrarProducto()">AGREGAR</button>
+  </div>
+
+  <div class="table-container">
+    <table mat-table [dataSource]="productos" class="mat-elevation-z8" #tabla1>
+        
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">DESCRIPCION</button></th>
+        <td mat-cell *matCellDef="let producto">{{producto.descripcion}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">CATEGORIA</button></th>
+        <td mat-cell *matCellDef="let producto">{{producto.categoria}}</td>
+      </ng-container>
+        
+      <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">PRECIO</button></th>
+        <td mat-cell *matCellDef="let producto">{{producto.precio | number : '1.2-2'}}€</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cantidad">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">CANTIDAD</button></th>
+        <td mat-cell *matCellDef="let producto">{{producto.cantidad}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">TOTAL</button></th>
+        <td mat-cell *matCellDef="let producto">{{producto.total_producto | number : '1.2-2'}}€</td>
+      </ng-container>
+        
+      <ng-container matColumnDef="borrar">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">BORRAR</button></th>
+        <td mat-cell *matCellDef="let j = index;">
+          <button type="button" class="btn btn-outline-danger" color="warn" focusable="false" (click)="borrarProducto(j)"><mat-icon>delete</mat-icon></button>
+        </td>
+      </ng-container>
+        
+      <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+    </table>
+  </div>
+
+  <div class="info-container">
+    <button type="button" class="info-botones btn btn-dark">USUARIO</button>
+    <button type="button" class="info-botones btn btn-dark">CLIENTE</button>
+    <button type="button" class="info-botones btn btn-dark">FECHA</button>
+    <div class="info-boxes-container">
+      <div class="info-boxes"><span id="usuario"></span></div>
+      <div class="info-boxes">
+        <mat-form-field id="cliente">
+          <mat-label>Cliente</mat-label>
+          <input [(ngModel)]="cliente" matInput type="text" required matTooltip="Ingrese cliente">
+        </mat-form-field>
+      </div>
+      <div class="info-boxes"><span id="fecha"></span></div>
+    </div>
+  </div>
+
+  <div class="total-container">
+    <button type="button" class="total-botones btn btn-dark">TOTAL</button>
+    <button type="button" class="total-botones btn btn-dark">CANTIDAD TOTAL</button>
+    <div class="total-boxes-container">
+      <div class="total-boxes"><span id="totalNumVenta"></span></div>
+      <div class="total-boxes"><span id="cantidadNumVenta"></span></div>
+    </div>
+  </div>
+
+  <div class="venta-container">
+    <button type="button" class="venta-botones btn btn-warning" (click)="confirmarVenta()">CONFIRMAR VENTA</button>
+    <button type="button" class="venta-botones btn btn-danger" (click)="cancelarVenta()">CANCELAR VENTA</button>
+  </div>
+</div>
