@@ -1,0 +1,146 @@
+.max-container {
+    width: 87.5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -87.5vh;
+    margin-left: 12.5vw;
+    justify-content: space-around;    
+}
+
+/*Tabla*/
+
+.table-container    {
+    margin: 1rem;
+    width: 87.5%;
+    display: flex;
+}
+
+table {
+    width: 87.5%;
+    margin: 1rem auto;
+}
+
+td, th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.tabla-botones   {
+    cursor: auto;
+}
+
+/*Tabla*/
+
+/*Agregar*/
+
+.vender-container {
+    display: flex;
+    width: 40%;
+    margin-left: 49.5rem;
+    box-shadow: -1px 3px 7px 0px rgba(0,0,0,0.45);
+    padding: 1rem;
+}
+
+mat-form-field  {
+    width: 12vw;
+    padding: 0 1.5rem 0 0;
+}
+
+.boton-agregar  {
+    width: 9vw;
+    margin: 0;
+    height: 3.5rem;
+    font-size: 1.75rem;
+}
+
+/*Agregar*/
+
+/*Info*/
+
+.info-container {
+    width: 64.5%;
+    margin-top: 2vw;
+    margin-left: 6.5rem;
+    margin-right: 57.5rem;
+    box-shadow: -1px 3px 7px 0px rgba(0,0,0,0.45);
+    padding: 1rem;
+}
+.info-botones   {
+    width: 12.5vw;
+    margin: 0 .5rem;
+    cursor: auto;
+}
+.info-boxes-container  {
+    display: flex;
+    margin-top: .5rem;
+}
+.info-boxes {
+    display: flex;
+    width: 12.5vw;
+    height: 5vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid black;
+    font-size: 1.75rem;
+}
+
+#usuario    {
+    font-size: 1rem;
+}
+#cliente  {
+    padding: 1rem .5rem;
+}
+
+/*Info*/
+
+/*Total*/
+
+.total-container {
+    width: 34.5%;
+    margin-top: -9vw;
+    margin-left: 55rem;
+    box-shadow: -1px 3px 7px 0px rgba(0,0,0,0.45);
+    padding: 1rem;
+    padding-left: 1.75rem;
+}
+
+.total-botones   {
+    width: 12.5vw;
+    margin: 0 .5rem;
+    cursor: auto;
+}
+.total-boxes-container  {
+    display: flex;
+    margin-top: .5rem;
+}
+.total-boxes {
+    display: flex;
+    width: 12.5vw;
+    height: 5vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid black;
+    font-size: 1.75rem;
+}
+
+/*Total*/
+
+/*Venta*/
+
+.venta-container {
+    width: 34.5%;
+    margin-top: 2vw;
+    margin-left: 54.5rem;
+    box-shadow: -1px 3px 7px 0px rgba(0,0,0,0.45);
+    padding: 1rem;
+}
+.venta-botones   {
+    width: 12.5vw;
+    margin: 0 1rem;
+}
+
+/*Venta*/

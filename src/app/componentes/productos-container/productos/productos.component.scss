@@ -1,0 +1,55 @@
+.max-container {
+    width: 87.5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -87.5vh;
+    margin-left: 12.5vw;
+    justify-content: space-around;    
+}
+
+/*Tabla*/
+
+.table-container    {
+    margin: 1rem;
+    width: 87.5%;
+    display: flex;
+}
+
+table {
+    width: 87.5%;
+    margin: 1rem auto;
+}
+
+td, th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.tabla-botones   {
+    cursor: auto;
+}
+
+/*Tabla*/
+
+/*Agregar*/
+
+.agregar-producto-container {
+    margin-left: 28.75rem;
+    width: 60%;
+    box-shadow: -1px 3px 7px 0px rgba(0,0,0,0.45);
+    padding: 1rem;
+}
+
+mat-form-field  {
+    width: 12vw;
+    padding: 1rem 1.25rem;
+}
+
+.boton-agregar  {
+    margin-top: -1rem;
+    width: 13.5vw;
+    height: auto;
+    font-size: 1.75rem;
+}
+
+/*Agregar*/

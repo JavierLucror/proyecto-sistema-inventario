@@ -1,0 +1,59 @@
+<div class="max-container">
+    <div class="table-container">
+      <table mat-table [dataSource]="categorias" class="mat-elevation-z8" #tabla1>
+          
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">NOMBRE</button></th>
+          <td mat-cell *matCellDef="let categoria">{{categoria.nombre}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="marca">
+            <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">MARCA</button></th>
+            <td mat-cell *matCellDef="let categoria">{{categoria.marca}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="pais">
+            <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">PAIS</button></th>
+            <td mat-cell *matCellDef="let categoria">{{categoria.pais}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="editar">
+          <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">EDITAR</button></th>
+          <td mat-cell *matCellDef="let j = index;">
+            <button type="button" class="btn btn-outline-info id" color="info" focusable="false" (click)="abrirDialog(j)"><mat-icon>edit</mat-icon></button>
+          </td>
+        </ng-container>
+          
+        <ng-container matColumnDef="borrar">
+          <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">BORRAR</button></th>
+          <td mat-cell *matCellDef="let j = index;">
+            <button type="button" class="btn btn-outline-danger" color="warn" focusable="false" (click)="borrarCategoria(j)"><mat-icon>delete</mat-icon></button>
+          </td>
+        </ng-container>
+          
+        <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+      </table>
+    </div>
+  
+      <div class="agregar-categoria-container">
+        
+        <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input matInput [(ngModel)]="categoriaSelect.nombre" type="text" matTooltip="Ingrese nombre">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Marca</mat-label>
+          <input matInput [(ngModel)]="categoriaSelect.marca" type="text" matTooltip="Ingrese marca">
+        </mat-form-field>
+  
+        <mat-form-field>
+          <mat-label>Pais</mat-label>
+          <input matInput [(ngModel)]="categoriaSelect.pais" type="text" matTooltip="Ingrese pais">
+        </mat-form-field>
+        
+        <button type="button" class="boton-agregar btn btn-outline-primary" (click)="registrarCategoria()">AGREGAR</button>
+      </div>
+  
+</div>

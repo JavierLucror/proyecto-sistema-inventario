@@ -1,0 +1,16 @@
+<div class="max-container">
+    <form ngNativeValidate [formGroup]="formularioDeUsuarios" (ngSubmit)="enviarDatos(formularioDeUsuarios)">
+        <!--Inputs-->
+        <label for="" class="form-label">Correo</label>
+        <input required type="email" class="form-control" name="correo" formControlName="correo" id="" aria-describedby="correoHelpId" placeholder="Escribe tu correo electronico" matTooltip="Escribe tu correo electrónico">
+       
+        <label for="" class="form-label">Contraseña</label>
+        <input required type="password" class="form-control" name="contrasenia" formControlName="contrasenia" id="" aria-describedby="contraseniaHelpId" placeholder="Escribe tu contraseña" matTooltip="Escribe tu contraseña">
+    
+        <!--Botones de accion-->
+        <div class="contenedor" role="group" aria-label="">
+            <button type="submit" class="btn btn-success">ENVIAR</button>
+            <button type="reset" class="btn btn-danger">CANCELAR</button>
+        </div>
+    </form>
+</div>

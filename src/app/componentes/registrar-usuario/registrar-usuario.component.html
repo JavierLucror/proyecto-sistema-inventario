@@ -1,0 +1,27 @@
+<div class="max-container">
+    <form [formGroup]="formularioDeUsuarios" (ngSubmit)="enviarDatos(formularioDeUsuarios)">
+
+        <!--Inputs-->
+        <label for="" class="form-label">Nombre</label>
+        <input required type="text" class="form-control" name="nombre" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Escribe tu nombre" matTooltip="Escribe tu nombre">
+
+        <label for="" class="form-label">Apellidos</label>
+        <input required type="text" class="form-control" name="apellidos" formControlName="apellidos" id="" aria-describedby="apellidoshelpId" placeholder="Escribe tus apellidos"  matTooltip="Escribe tus apellidos">
+         
+        <label for="" class="form-label">Correo</label>
+        <input required type="email" class="form-control" name="correo" formControlName="correo" id="" aria-describedby="correoHelpId" placeholder="Escribe tu correo electronico"  matTooltip="Escribe tu correo electronico">
+       
+        <label for="" class="form-label">Contraseña</label>
+        <input required type="password" class="form-control" name="contrasenia" formControlName="contrasenia" id="" aria-describedby="contraseniaHelpId" placeholder="Escribe tu contraseña"  matTooltip="Escribe tu contraseña">
+        
+        <label for="" class="form-label">Telefono</label>
+        <input required type="text" class="form-control" name="telefono" formControlName="telefono" id="" aria-describedby="telefonoHelpId" placeholder="Escribe tu telefono"  matTooltip="Escribe tu telefono">
+    
+        <!--Botones de accion-->
+        <div class="contenedor" role="group" aria-label="">
+            <button type="submit" class="btn btn-success">ENVIAR</button>
+            <button type="reset" class="btn btn-danger">CANCELAR</button>
+        </div>
+    
+    </form>
+</div>

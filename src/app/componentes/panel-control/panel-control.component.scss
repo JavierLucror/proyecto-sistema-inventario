@@ -1,0 +1,30 @@
+.grid-container {
+    display: flex;
+    width: 87.5%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    margin-top: -90vh;
+    margin-left: 12.5vw;
+}
+  
+.grid-container > div {
+    height: 44.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 33%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 5px solid black;
+    font-size: 1.75rem;
+}
+
+.grid-container > div:hover, div:active   {
+    cursor: pointer;
+    animation: hoverEffect 0.75s ease-out;
+}
+
+@keyframes hoverEffect {
+   50% {font-size: 2.5rem;}
+   100% {font-size: 2.5rem;}
+}

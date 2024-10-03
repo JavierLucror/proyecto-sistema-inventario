@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>{{inputdata.title}}</h1>
+<div mat-dialog-content>
+    <form ngNativeValidate [formGroup]="formularioDeCategorias" (ngSubmit)="enviarDatos()">
+        <div class="input_container">
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" required matTooltip="Ingrese nombre" name="" formControlName="nombre" id="" aria-describedby="helpId">
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Marca</mat-label>
+                <input matInput type="text" required matTooltip="Ingrese marca" name="" formControlName="marca" id="" aria-describedby="helpId">
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Pais</mat-label>
+                <input matInput type="text" required matTooltip="Ingrese país" name="" formControlName="pais" id="" aria-describedby="helpId">
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions>
+            <button type="submit" class="boton-editar btn btn-outline-primary" (click)="cerrarDialog()">EDITAR</button>
+        </div>
+    </form>
+</div>

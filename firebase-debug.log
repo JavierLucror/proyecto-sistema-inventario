@@ -1,0 +1,32 @@
+[debug] [2024-10-03T15:59:02.560Z] ----------------------------------------------------------------------
+[debug] [2024-10-03T15:59:02.562Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\javie\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-10-03T15:59:02.562Z] CLI Version:   13.20.2
+[debug] [2024-10-03T15:59:02.563Z] Platform:      win32
+[debug] [2024-10-03T15:59:02.563Z] Node Version:  v20.15.1
+[debug] [2024-10-03T15:59:02.563Z] Time:          Thu Oct 03 2024 17:59:02 GMT+0200 (hora de verano de Europa central)
+[debug] [2024-10-03T15:59:02.563Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-03T15:59:02.569Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-03T15:59:02.569Z] > authorizing via signed-in user (inyestojavier@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\xampp\htdocs\proyecto-sistema-inventario
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 

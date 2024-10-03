@@ -1,0 +1,46 @@
+<mat-toolbar class="example-toolbar">
+	<h1 class="example-app-name">TALLERES DE EJEMPLO</h1>
+	<app-usuario-barra></app-usuario-barra>
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+	<mat-drawer #drawer class="example-drawer" mode="side" opened="true">
+		<mat-nav-list>
+			<mat-list-item class="parent" routerLink="/dashboard" routerLinkActive="active">
+				<mat-icon>dashboard</mat-icon>
+				<span class="full-width">Panel de control</span>
+			</mat-list-item>
+			<mat-list-item class="parent" routerLink="/vender" routerLinkActive="active">
+				<mat-icon>east</mat-icon>
+				<span class="full-width">Vender</span>
+			</mat-list-item>
+			<mat-list-item class="parent" routerLink="/ventas" routerLinkActive="active">
+				<mat-icon>shopping_cart</mat-icon>
+				<span class="full-width">Ventas</span>
+			</mat-list-item>
+			<mat-list-item class="parent" routerLink="/comprar" routerLinkActive="active">
+				<mat-icon>west</mat-icon>
+				<span class="full-width">Comprar</span>
+			</mat-list-item>
+			<mat-list-item class="parent" routerLink="/pedidos" routerLinkActive="active">
+				<mat-icon>receipt_long</mat-icon>
+				<span class="full-width">Pedidos</span>
+			</mat-list-item>			
+			<mat-list-item class="parent" routerLink="/productos" routerLinkActive="active">
+				<mat-icon>sell</mat-icon>
+				<span class="full-width">Productos</span>
+			</mat-list-item>
+			<mat-list-item class="parent" routerLink="/categorias" routerLinkActive="active">
+				<mat-icon>toc</mat-icon>
+				<span class="full-width">Categorias</span>
+			</mat-list-item>
+			<mat-list-item class="parent" routerLink="/usuarios" routerLinkActive="active">
+				<mat-icon>groups</mat-icon>
+				<span class="full-width">Usuarios</span>
+			</mat-list-item>
+		</mat-nav-list>
+		<mat-list-item class="user-zone">
+			<mat-icon>person</mat-icon>
+			<span class="full-width">{{value}}</span>
+		</mat-list-item>
+	</mat-drawer>
+</mat-drawer-container>

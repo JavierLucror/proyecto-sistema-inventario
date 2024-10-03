@@ -1,0 +1,63 @@
+<div class="max-container">
+  <div class="table-container">
+    <table mat-table [dataSource]="productos" class="mat-elevation-z8" #tabla1>
+        
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">DESCRIPCION</button></th>
+        <td mat-cell *matCellDef="let producto">{{producto.descripcion}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">CATEGORIA</button></th>
+        <td mat-cell *matCellDef="let producto">{{producto.categoria}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="precio">
+          <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">PRECIO</button></th>
+          <td mat-cell *matCellDef="let producto">{{producto.precio | number: '1.2-2' }}€</td>
+      </ng-container>
+
+      <ng-container matColumnDef="editar">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">EDITAR</button></th>
+        <td mat-cell *matCellDef="let j = index;">
+          <button type="button" class="btn btn-outline-info id" color="info" focusable="false" (click)="abrirDialog(j)"><mat-icon>edit</mat-icon></button>
+        </td>
+      </ng-container>
+        
+      <ng-container matColumnDef="borrar">
+        <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">BORRAR</button></th>
+        <td mat-cell *matCellDef="let j = index;">
+          <button type="button" class="btn btn-outline-danger" color="warn" focusable="false" (click)="borrarProducto(j)"><mat-icon>delete</mat-icon></button>
+        </td>
+      </ng-container>
+        
+      <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+    </table>
+  </div>
+
+  <div class="agregar-producto-container">
+      
+    <mat-form-field>
+      <mat-label>Descripcion</mat-label>
+      <input matInput [(ngModel)]="productoSelect.descripcion" type="text" matTooltip="Ingrese descripcion">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Categoria</mat-label>
+      <mat-select [(ngModel)]="productoSelect.categoria">
+        @for (categoria of categorias; track categoria) {
+          <mat-option [value]="categoria.nombre">{{categoria.nombre}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Precio</mat-label>
+      <input matInput [(ngModel)]="productoSelect.precio" type="text" matTooltip="Ingrese precio">
+    </mat-form-field>
+      
+    <button type="button" class="boton-agregar btn btn-outline-primary" (click)="registrarProducto()">AGREGAR</button>
+  </div>
+
+</div>

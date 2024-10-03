@@ -1,0 +1,28 @@
+<div class="max-container">
+    <div class="table-container">
+        <table mat-table [dataSource]="usuarios" class="mat-elevation-z8" #tabla2>
+          <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">NOMBRE</button></th>
+            <td mat-cell *matCellDef="let usuario">{{usuario.nombre}}</td>
+          </ng-container>
+        
+          <ng-container matColumnDef="apellidos">
+            <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">APELLIDOS</button></th>
+            <td mat-cell *matCellDef="let usuario">{{usuario.apellidos}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="correo">
+            <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">CORREO</button></th>
+            <td mat-cell *matCellDef="let usuario">{{usuario.correo}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="telefono">
+            <th mat-header-cell *matHeaderCellDef><button type="button" class="tabla-botones btn btn-dark">TELEFONO</button></th>
+            <td mat-cell *matCellDef="let usuario">{{usuario.telefono}}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+          <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+        </table>
+    </div>
+</div>
